@@ -94,7 +94,7 @@ $(function(){
  * 		如果为空，提示用户
  *  3. 如果不为空，提交表单
  *
- *  注：表单元素需要设置那么属性值
+ *  注：表单元素需要设置name属性值
  */
 function checkLogin() {
 
@@ -103,7 +103,7 @@ function checkLogin() {
 	var userPwd = $("#userPwd").val(); // 密码
 
 	// 2. 判断用户名或密码是否为空
-	/*if (isEmpty(userName)) {
+	if (isEmpty(userName)) {
         // 如果为空，则提示用户
         $("#msg").html("用户名称不能为空！");
         return;
@@ -112,7 +112,7 @@ function checkLogin() {
         // 如果为空，则提示用户
         $("#msg").html("用户密码不能为空！");
         return;
-    }*/
+    }
 
 	// 3. 如果不为空，提交表单
 	$("#loginForm").submit();
