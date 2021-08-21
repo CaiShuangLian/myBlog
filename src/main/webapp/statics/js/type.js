@@ -18,7 +18,6 @@
 							如果大于2，表示有多条类型记录，删除指定tr对象
  * @param typeId
  */
-
 function deleteType(typeId){
 	// 弹出提示框询问用户是否确认删除
 	swal({ 
@@ -34,20 +33,22 @@ function deleteType(typeId){
 		$.ajax({
 			type:"post",
 			url:"type",
+			dataType:"json",
 			data:{
 				actionName:"delete",
 				typeId:typeId
 			},
-			success:function(result){
+			success:function(resultInfo){
 				// 判断是否删除成功
-				if (result.code == 1) {
+				console.log(resultInfo);
+				if (resultInfo.code == 1) {
 					// 提示成功
 					swal("","<h2>删除成功！</h2>","success");
 					// 执行成功的DOM操作
 					deleteDom(typeId);
 				} else {
 					// 提示用户失败   swal("标题","内容","图标")
-					swal("","<h3>"+result.msg+"</h3>","error");
+					swal("","<h3>"+resultInfo.msg+"</h3>","error");
 				}
 			}
 		});

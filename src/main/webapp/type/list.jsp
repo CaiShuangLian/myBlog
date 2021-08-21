@@ -5,6 +5,7 @@
   Time: 14:06
   To change this template use File | Settings | File Templates.
 --%>
+<constant name="struts.serve.static.browserCache" value="false" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="col-md-9">
