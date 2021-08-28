@@ -14,7 +14,7 @@
 
     <div class="data_list">
         <div class="data_list_title"><span class="glyphicon glyphicon glyphicon-th-list"></span>&nbsp;
-            云记列表
+            博客列表
         </div>
         <!--判断列表是否存在-->
         <c:if test="${empty page}">
